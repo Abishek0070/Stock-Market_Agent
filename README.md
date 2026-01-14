@@ -4,7 +4,7 @@ A multi-agent AI system built with crewAI for financial analysis and research. T
 
 ## 📋 Overview
 
-Memory-Bot is powered by [crewAI](https://crewai.com), a framework designed for orchestrating role-playing autonomous AI agents. The system enables multiple specialized agents to work together seamlessly on financial analysis tasks, combining their expertise to generate comprehensive research reports.
+This agent is powered by [crewAI](https://crewai.com), a framework designed for orchestrating role-playing autonomous AI agents. The system enables multiple specialized agents to work together seamlessly on financial analysis tasks, combining their expertise to generate comprehensive research reports.
 
 ## ✨ Features
 
@@ -33,8 +33,8 @@ Memory-Bot is powered by [crewAI](https://crewai.com), a framework designed for 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Abishek0070/Memory-Bot.git
-   cd Memory-Bot
+   git clone https://github.com/Abishek0070/Stock-Market_Agent.git
+   cd Stock-Market_Agent
    ```
 
 2. **Install UV** (if not already installed)
@@ -97,7 +97,7 @@ Modify the following files for advanced customization:
 ## 📁 Project Structure
 
 ```
-Memory-Bot/
+Stock-Market_Agent/
 ├── knowledge/              # Knowledge base and reference materials
 ├── src/
 │   └── finance/           # Main application code
