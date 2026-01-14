@@ -1,0 +1,18 @@
+research_task:
+  description: >
+    Find the latest stock market news for {topic}. 
+    KEEP YOUR RESPONSE UNDER 500 WORDS.
+  expected_output: >
+    A short summary of 3 key market updates.
+  agent: researcher
+
+reporting_task:
+  description: >
+    Summarize the news into investment suggestions.
+    BE CONCISE.
+  expected_output: >
+    A 2-paragraph markdown report.
+    Give the best thing to invest according to the current Trends in bullet points
+    Give the major Geopolitical and other issues that are currently affeccting the stock market
+  agent: reporting_analyst
+  output_file: report.md
