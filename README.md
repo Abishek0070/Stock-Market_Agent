@@ -1,54 +1,144 @@
-# Finance Crew
+# Stock-Market Agent 🤖
 
-Welcome to the Finance Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+A multi-agent AI system built with crewAI for financial analysis and research. This project leverages autonomous AI agents that collaborate to perform complex financial analysis tasks, demonstrating the power of multi-agent orchestration in finance.
 
-## Installation
+## 📋 Overview
 
-Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+Memory-Bot is powered by [crewAI](https://crewai.com), a framework designed for orchestrating role-playing autonomous AI agents. The system enables multiple specialized agents to work together seamlessly on financial analysis tasks, combining their expertise to generate comprehensive research reports.
 
-First, if you haven't already, install uv:
+## ✨ Features
+
+- **Multi-Agent Collaboration**: Specialized AI agents work together on complex financial tasks
+- **Autonomous Research**: Agents can independently gather, analyze, and synthesize financial information
+- **Customizable Workflows**: Flexible agent and task configuration through YAML files
+- **LLM-Powered Analysis**: Leverages large language models for intelligent financial insights
+- **Automated Reporting**: Generates detailed financial analysis reports automatically
+
+## 🛠️ Technology Stack
+
+- **Framework**: crewAI
+- **Language**: Python 3.10 - 3.13
+- **Package Manager**: UV (for fast, reliable dependency management)
+- **LLM Provider**: Groq API
+- **AI Model**: Llama
+
+## 📦 Installation
+
+### Prerequisites
+
+- Python >= 3.10 and < 3.14
+- UV package manager (recommended) or pip
+
+### Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Abishek0070/Memory-Bot.git
+   cd Memory-Bot
+   ```
+
+2. **Install UV** (if not already installed)
+   ```bash
+   pip install uv
+   ```
+
+3. **Install dependencies**
+   ```bash
+   crewai install
+   ```
+   
+   Or using UV directly:
+   ```bash
+   uv sync
+   ```
+
+4. **Configure environment variables**
+   
+   Create a `.env` file in the root directory and add your Groq API key:
+   ```env
+   GROQ_API_KEY=your_groq_api_key_here
+   ```
+
+## 🚀 Usage
+
+Run the finance crew from the root folder:
 
 ```bash
-pip install uv
+crewai run
 ```
 
-Next, navigate to your project directory and install the dependencies:
+This command will:
+- Initialize the finance analysis crew
+- Assemble the configured AI agents
+- Execute the defined tasks in sequence
+- Generate a `report.md` file with the analysis results
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
+## ⚙️ Configuration
+
+The project uses YAML configuration files for easy customization:
+
+### Agent Configuration
+Edit `src/finance/config/agents.yaml` to:
+- Define agent roles and responsibilities
+- Set agent goals and backstories
+- Configure agent capabilities and tools
+
+### Task Configuration  
+Edit `src/finance/config/tasks.yaml` to:
+- Define analysis tasks
+- Set task descriptions and expected outputs
+- Configure task dependencies and workflows
+
+### Custom Logic
+Modify the following files for advanced customization:
+- `src/finance/crew.py` - Add custom logic, tools, and arguments
+- `src/finance/main.py` - Configure custom inputs for agents and tasks
+
+## 📁 Project Structure
+
 ```
-### Customizing
-
-**Add your `OPENAI_API_KEY` into the `.env` file**
-
-- Modify `src/finance/config/agents.yaml` to define your agents
-- Modify `src/finance/config/tasks.yaml` to define your tasks
-- Modify `src/finance/crew.py` to add your own logic, tools and specific args
-- Modify `src/finance/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
-
-```bash
-$ crewai run
+Memory-Bot/
+├── knowledge/              # Knowledge base and reference materials
+├── src/
+│   └── finance/           # Main application code
+│       ├── config/        # YAML configuration files
+│       ├── crew.py        # Crew orchestration logic
+│       └── main.py        # Entry point
+├── .gitignore
+├── pyproject.toml         # Project dependencies
+├── uv.lock               # Locked dependencies
+└── README.md
 ```
 
-This command initializes the finance Crew, assembling the agents and assigning them tasks as defined in your configuration.
+## 📊 Example Output
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
+By default, the system generates a comprehensive research report on LLMs (Large Language Models) in the finance domain, saved as `report.md` in the root folder.
 
-## Understanding Your Crew
+## 🤝 Contributing
 
-The finance Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
+Contributions are welcome! Feel free to:
+- Report bugs
+- Suggest new features
+- Submit pull requests
+- Improve documentation
 
-## Support
+## 📚 Resources
 
-For support, questions, or feedback regarding the Finance Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
+- [crewAI Documentation](https://docs.crewai.com)
+- [crewAI GitHub Repository](https://github.com/joaomdmoura/crewai)
+- [crewAI Discord Community](https://discord.com/invite/X4JWnZnxPb)
+- [crewAI Chat Assistant](https://chatg.pt/DWjSBZn)
 
-Let's create wonders together with the power and simplicity of crewAI.
+## ⚠️ Disclaimer
+
+This project is for demonstration and educational purposes only. The financial analysis and reports generated should not be construed as financial, investment, or trading advice. Always consult with qualified financial professionals before making investment decisions.
+
+
+## 👨‍💻 Author
+
+**Abishek0070**
+- GitHub: [@Abishek0070](https://github.com/Abishek0070)
+
+---
+
+Built with ❤️ using [crewAI](https://crewai.com)
