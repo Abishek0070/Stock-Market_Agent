@@ -15,7 +15,7 @@ load_dotenv()
 class Finance():
     """Finance crew for daily stock market updates"""
 
-    # These point to your YAML files in the config folder
+    
     agents_config = 'config/agents.yaml'
     tasks_config = 'config/tasks.yaml'
 
@@ -68,7 +68,7 @@ class Finance():
             tasks=self.tasks,
             process=Process.sequential,
             verbose=True,
-            memory=False, # Keeps it fast and avoids OpenAI embedding calls
+            memory=False, 
             llm=self.groq_llm,
             manager_llm=self.groq_llm
         )
